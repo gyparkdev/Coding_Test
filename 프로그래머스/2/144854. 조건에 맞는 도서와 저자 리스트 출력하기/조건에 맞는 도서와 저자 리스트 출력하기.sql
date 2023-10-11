@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT book.BOOK_ID, author.AUTHOR_NAME, TO_CHAR(book.PUBLISHED_DATE, 'YYYY-MM-DD') AS PUBLISHED_DATE
+  FROM BOOK book 
+  JOIN AUTHOR author
+    ON book.AUTHOR_ID = author.AUTHOR_ID 
+   AND book.CATEGORY = '경제'
+ ORDER BY book.PUBLISHED_DATE;
